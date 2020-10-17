@@ -1,0 +1,24 @@
+{
+  "name": "installed-win-apps",
+  "version": "1.0.3",
+  "description": "Get the paths of installed programs on Windows",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Windows",
+    "installed",
+    "software",
+    "apps",
+    "programs",
+    "wps"
+  ],
+  "author": "Dallas Cao",
+  "license": "ISC",
+  "dependencies": {
+    "list-files-in-dir": "^0.1.5",
+    "win-codepage": "^1.0.0",
+    "win-lnk-parser": "^1.1.2"
+  }
+}

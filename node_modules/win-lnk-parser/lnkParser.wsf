@@ -1,0 +1,18 @@
+<package>
+   <job id="vbs">
+      <script language="VBScript">
+        dim ArgObj, fullPath, targetPath, windowStyle, hotKey, iconLocation, description, workingDirectory
+        set WshShell = WScript.CreateObject("WScript.Shell")
+        set ArgObj = WScript.Arguments
+        fullPath = ArgObj(0)
+        set oShellLink = WshShell.CreateShortcut(fullPath)
+        targetPath = oShellLink.TargetPath
+        windowStyle = oShellLink.WindowStyle
+        hotKey = oShellLink.Hotkey
+        iconLocation = oShellLink.IconLocation
+        description = oShellLink.Description
+        workingDirectory = oShellLink.WorkingDirectory
+        WSH.echo(targetPath & "," & windowStyle & "," & hotKey & "," & iconLocation & "," & description & "," & description & "," & workingDirectory)
+      </script>
+   </job>
+</package>
