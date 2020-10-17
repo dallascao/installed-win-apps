@@ -35,7 +35,7 @@ const myExport = {
     async getAllPaths() {
         const folders = [
             os.homedir() + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs",
-            "C:\\Users\\Default\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs",
+            "C:\\Users\\Default\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs"
         ]
         const promises = [this._getpath(folders[0]), this._getpath(folders[1])];
         const allPaths = await Promise.all(promises);
