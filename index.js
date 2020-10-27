@@ -1,8 +1,11 @@
 const lsDir = require('list-files-in-dir');
 const os = require("os");
 const path = require('path');
+
+
+
 const lnkParser = require('win-lnk-parser')
-const codePage = require("win-codepage");
+const codePage = require("./win-codepage.js");
  
 
 const myExport = {
@@ -33,43 +36,28 @@ const myExport = {
     },
 
     async getAllPaths() {
+
+        const homePath = os.homedir();
+        const usersPath = path.dirname(homePath);
+        const drivePath = path.dirname(usersPath);
         const folders = [
-            os.homedir() + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs",
-            "C:\\Users\\Default\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs"
+            homePath + "\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs",
+            usersPath + "\\Default\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs",
+            drivePath +  "ProgramData\\Microsoft\\Windows\\Start Menu\\Programs"
         ]
-        const promises = [this._getpath(folders[0]), this._getpath(folders[1])];
+        const promises = [this._getpath(folders[0]), this._getpath(folders[1]), this._getpath(folders[2])];
         const allPaths = await Promise.all(promises);
-        return [...allPaths[0], ...allPaths[1]]
-    },
-    /**
-     * provide a key word and returns an array of paths
-     * @param {String} keyword 
-     * @returns {Promise:Array} array of paths that contain the keyword
-     */
-    async searchInstalledPath(keyword) {
-        
-        const allPaths = await this.getAllPaths();
-        return allPaths.filter(ele=>ele.includes(keyword))
+        return [...allPaths[0], ...allPaths[1], ...allPaths[2]]
     }
 }
 
 module.exports = myExport
 
-// const installedPaths = myExport
-// /*
-// installedPaths.getAllPaths().then (paths=>{
-//     console.log(paths)   //paths is an array that contains the paths of all installed apps
-// })
+/*
+const installedPaths = myExport
 
-// installedPaths.searchInstalledPath("WPS").then (paths=>{
-//     console.log(paths)   //paths is an array that contains the paths containing the word "WPS"
-// })
-// */
-// //to get the paths of WPS executable
-// const main = async()=>{
-//     const temp = await installedPaths.searchInstalledPath("ksolaunch.exe");
-//     console.log(temp[0]);
-    
-// }
+installedPaths.getAllPaths().then (paths=>{
+     console.log(paths)   //paths is an array that contains the paths of all installed apps
+})
+*/
 
-// main()

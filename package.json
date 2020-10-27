@@ -1,6 +1,6 @@
 {
   "name": "installed-win-apps",
-  "version": "1.0.5",
+  "version": "1.0.8",
   "description": "Get the paths of installed programs on Windows",
   "homepage": "https://github.com/dallascao/installed-win-apps",
   "repository": {
@@ -22,7 +22,12 @@
   "author": "Dallas Cao",
   "license": "ISC",
   "dependencies": {
+    "@sindresorhus/is": "^4.0.0",
+    "command-exists": "^1.2.9",
+    "execa": "^4.0.3",
+    "is-windows": "^1.0.2",
     "list-files-in-dir": "^0.1.5",
+    "ow": "^0.18.0",
     "win-codepage": "^1.0.0",
     "win-lnk-parser": "^1.1.2"
   }
