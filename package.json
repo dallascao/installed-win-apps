@@ -1,6 +1,6 @@
 {
   "name": "installed-win-apps",
-  "version": "1.0.8",
+  "version": "1.0.12",
   "description": "Get the paths of installed programs on Windows",
   "homepage": "https://github.com/dallascao/installed-win-apps",
   "repository": {
