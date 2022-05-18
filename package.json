@@ -1,16 +1,59 @@
 {
-  "name": "installed-win-apps",
-  "version": "1.0.12",
+  "_from": "installed-win-apps@^1.0.8",
+  "_id": "installed-win-apps@1.0.12",
+  "_inBundle": false,
+  "_integrity": "sha512-7v+RRtdDWg6OW4LSM0OSkid8/AH9labtqb7Kg/5jBMkHrIQ8Ducfdx+hHEAxwq86USSgnAWfRl/RuVPeGRBn+w==",
+  "_location": "/installed-win-apps",
+  "_phantomChildren": {
+    "cross-spawn": "7.0.1",
+    "get-stream": "5.1.0",
+    "human-signals": "1.1.1",
+    "is-stream": "2.0.0",
+    "merge-stream": "2.0.0",
+    "npm-run-path": "4.0.1",
+    "onetime": "5.1.0",
+    "signal-exit": "3.0.2",
+    "strip-final-newline": "2.0.0"
+  },
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "installed-win-apps@^1.0.8",
+    "name": "installed-win-apps",
+    "escapedName": "installed-win-apps",
+    "rawSpec": "^1.0.8",
+    "saveSpec": null,
+    "fetchSpec": "^1.0.8"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/installed-win-apps/-/installed-win-apps-1.0.12.tgz",
+  "_shasum": "1c6111a591f2ec66ace1f729a77bb8946677e0d3",
+  "_spec": "installed-win-apps@^1.0.8",
+  "_where": "E:\\cygwin\\home\\Administrator\\gt4t_develop\\GT4T_new_180622_32bit\\nwjs-sdk\\package.nw",
+  "author": {
+    "name": "Dallas Cao"
+  },
+  "bugs": {
+    "url": "https://github.com/dallascao/installed-win-apps/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "@sindresorhus/is": "^4.6.0",
+    "command-exists": "^1.2.9",
+    "execa": "^4.1.0",
+    "iconv-lite": "^0.6.3",
+    "is-windows": "^1.0.2",
+    "list-files-in-dir": "^0.1.5",
+    "ow": "^0.18.0",
+    "win-codepage": "^1.0.0",
+    "win-lnk-parser": "^1.1.2"
+  },
+  "deprecated": false,
   "description": "Get the paths of installed programs on Windows",
   "homepage": "https://github.com/dallascao/installed-win-apps",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/dallascao/installed-win-apps"
-  },
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "keywords": [
     "Windows",
     "installed",
@@ -19,16 +62,15 @@
     "programs",
     "wps"
   ],
-  "author": "Dallas Cao",
   "license": "ISC",
-  "dependencies": {
-    "@sindresorhus/is": "^4.0.0",
-    "command-exists": "^1.2.9",
-    "execa": "^4.0.3",
-    "is-windows": "^1.0.2",
-    "list-files-in-dir": "^0.1.5",
-    "ow": "^0.18.0",
-    "win-codepage": "^1.0.0",
-    "win-lnk-parser": "^1.1.2"
-  }
+  "main": "index.js",
+  "name": "installed-win-apps",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dallascao/installed-win-apps.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.1.3"
 }
